@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\gestionnaire;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[gestionnaire::class, "home"])->name("home");
+Route::post('/',[gestionnaire::class, "sauvegarder"]);
+
+Route::get('/affichage',[gestionnaire::class, "affichage"])->name("event");

@@ -17,7 +17,7 @@ class CreateEvenementsTable extends Migration
             $table->id();
             $table->string("nom");
             $table->string("date_demarrage");
-            $table->timestamp("date_fin");
+            $table->string("date_fin");
             $table->string("description");
         });
     }
@@ -31,4 +31,6 @@ class CreateEvenementsTable extends Migration
     {
         Schema::dropIfExists('evenements');
     }
+
+    
 }
